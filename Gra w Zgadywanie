@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+auto main() -> int
+{
+    int proba = 1 ;
+    int x ;
+    int zgadywana ;
+    x = rand()%100 + 1;
+    
+    std::cout<<"Zagrajmy w gre\nMysle o liczbie z przedzialu 0 a 100"<<endl;
+    while(x!=zgadywana){
+        cout<<"Podaj Liczbe:";
+        cin>>zgadywana;
+        if(x>zgadywana){
+            std::cout<<"Za mala"<<endl;
+            proba++;
+        }else if(x<zgadywana){
+             std::cout<<"Za Duza"<<endl;
+            proba++;
+        }
+    }
+    std::cout<<"Brawo!"<<endl;
+    std::cout<<"Zgadles przy: ";
+    std::cout<<proba;
+    return 0;
+}
