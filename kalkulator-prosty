@@ -1,0 +1,51 @@
+#include <iostream>
+#include <cstring>
+#include <string>
+using namespace std;
+
+auto main() -> int
+{
+    int wybor ;
+    int x ;
+    int a ;
+    cout <<"1.Dodawanie\n2.Odejmowanie\n3.Mnozenie\n4.Dzielenie"<<endl;
+    cout <<"Wybor: ";
+    cin>> wybor;
+    
+    if(wybor>=4 || wybor<0){
+        
+    }else{
+        std::cout<<"blad";
+        return 0 ;
+    }
+    
+   
+    cout<<"Podaj wartosc a: ";
+    cin>>a;
+    cout<<"Podaj wartosc b: ";
+    cin>>x;
+    if(wybor==1){
+        std::cout<<"Wynik Dodawania:";
+        std::cout << x+a << std::endl;
+    }else if(wybor==2){
+        std::cout<<"Wynik Odejmowania:";
+        std::cout << x-a << std::endl;
+    }else if(wybor==3){
+        std::cout<<"Wynik Mnozenia:";
+        std::cout << x*a << std::endl;
+    }else if(wybor==4){
+        if(x==0||a==0){
+            cout<<"Tak nie wolno!";
+            return 0;
+        }else{
+            std::cout<<x/a<<std::endl;
+        }
+    }
+    
+    else{
+        cout<<"To nie zostalo przewidziane";
+    }
+    
+
+    return 0;
+}
