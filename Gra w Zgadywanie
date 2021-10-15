@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>  
 
 using namespace std;
 auto main() -> int
 {
+    srand (time(NULL));
     int proba = 1 ;
     int x ;
     int zgadywana ;
