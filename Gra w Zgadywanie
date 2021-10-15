@@ -11,7 +11,7 @@ auto main() -> int
     int zgadywana ;
     x = rand()%100 + 1;
     
-    std::cout<<"Zagrajmy w gre\nMysle o liczbie z przedzialu 0 a 100"<<endl;
+    std::cout<<"Zagrajmy w gre\nMysle o liczbie z przedzialu 0 a 100"<<std::endl;
     while(x!=zgadywana){
         std::cout<<"Podaj Liczbe:";
         std::cin>>zgadywana;
@@ -26,6 +26,6 @@ auto main() -> int
     std::cout<<"Brawo!"<<std::endl;
     std::cout<<"Zgadles przy: ";
     std::cout<<proba;
-    std::cout<<" probie"
+    std::cout<<" probie";
     return 0;
 }
