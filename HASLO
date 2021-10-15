@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+   string odp = "student";
+   string haslo = "";
+   
+    std::cout<<"Podaj haslo do konta 'student':"<<endl;
+    while(odp!=haslo){
+    std::cout<<"PASSWORD: ";
+    std::cin>>haslo;
+      if(haslo!=odp){
+       std::cout<<"NIEPOPRAWNE HASLO"<<endl;
+      }
+    }
+    std::cout<<"ZALOGOWANO POMYSLNIE";
+   
+   
+    return 0;
+}
+
