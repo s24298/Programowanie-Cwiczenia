@@ -13,17 +13,17 @@ auto main() -> int
     
     std::cout<<"Zagrajmy w gre\nMysle o liczbie z przedzialu 0 a 100"<<endl;
     while(x!=zgadywana){
-        cout<<"Podaj Liczbe:";
-        cin>>zgadywana;
+        std::cout<<"Podaj Liczbe:";
+        std::cin>>zgadywana;
         if(x>zgadywana){
-            std::cout<<"Za mala"<<endl;
+            std::cout<<"Za mala"<<std::endl;
             proba++;
         }else if(x<zgadywana){
-             std::cout<<"Za Duza"<<endl;
+             std::cout<<"Za Duza"<<std::endl;
             proba++;
         }
     }
-    std::cout<<"Brawo!"<<endl;
+    std::cout<<"Brawo!"<<std::endl;
     std::cout<<"Zgadles przy: ";
     std::cout<<proba;
     std::cout<<" probie"
