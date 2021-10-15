@@ -24,5 +24,6 @@ auto main() -> int
     std::cout<<"Brawo!"<<endl;
     std::cout<<"Zgadles przy: ";
     std::cout<<proba;
+    std::cout<<" probie"
     return 0;
 }
