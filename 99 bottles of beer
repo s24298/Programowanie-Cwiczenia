@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+   int butelki = 99;
+    
+    while(true){
+    std::cout <<butelki;
+    std::cout <<" bootles of beer on the wall,";
+    std::cout <<butelki;
+    std::cout << " bootles of beer"<<std::endl;
+    std::cout << "Take one down, pass it around,";
+    butelki--;
+        if(butelki==1){
+        std::cout <<butelki;
+        std::cout <<" bootle of beer on the wall,";
+        std::cout <<butelki;
+        std::cout << " bootle of beer"<<std::endl;
+        std::cout << "Take one down, pass it around,";
+        butelki--; 
+        }
+        
+        if(butelki==0){
+            std::cout << "No more bottles of beer on the wall, no more bottles of beer."<<std::endl;
+            std::cout << "Go to the store and buy some more";
+            break;
+        }
+    }
+    
+    
+    
+
+    return 0;
+}
