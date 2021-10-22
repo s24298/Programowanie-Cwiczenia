@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+struct Student{
+    std::string imie;
+    int index;
+    int semestr;
+    float srednia;
+    
+    string opis(){
+        
+        std::string wartosc;
+        std::string stringIndex = to_string (index);
+        std::string stringSemestr = to_string (semestr);
+        std::string stringSrednia = to_string (srednia);
+        
+        wartosc = "Imie: "+imie +"\n"+"Index: "+stringIndex+"\n"+"Semestr: "+stringSemestr +"\n"+"Srednia: "+stringSrednia ;
+        
+       // cout<<"Imie: "<<imie<<"\nIndex: "<<index<<"\nsemestr: "<<semestr<<"\nSrednia: "<<srednia;
+        
+        return wartosc;
+    }
+    
+    Student(std::string x,int a , int b, float c){
+        imie = x;
+        index = a;
+        semestr = b;
+        srednia = c;
+    }
+};
+
+int main()
+{
+    Student st("Jacek",22000,4,4.5);
+    std::cout<<st.opis();
+
+    return 0;
+}
