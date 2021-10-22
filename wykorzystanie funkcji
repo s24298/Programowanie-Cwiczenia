@@ -3,12 +3,12 @@
 
 using namespace std;
 
-    auto askUser(std::string prompt)-> int
+    auto askUser(std::string argumentFunkcji)-> int
     {
-        std::cout<< prompt << "int: ";
-        auto n = std::string{};
-        std::getline(std::cin,n);
-        return std::stoi(n);
+        std::cout<< argumentFunkcji << "int: ";
+        auto zmiennaLokalna = std::string{};
+        std::getline(std::cin,zmiennaLokalna);
+        return std::stoi(zmiennaLokalna);
     }
     
 
