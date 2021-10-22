@@ -1,0 +1,93 @@
+
+#include <iostream>
+
+struct Czas{
+    int hour;
+    int min;
+    int sec;
+
+
+  
+    
+    void godzina(){
+        
+        std::string tim;
+        std::string sHour;
+        std::string sMin;
+        std::string sSec;
+        
+        
+       
+        if(hour<10){
+            sHour = std::to_string (hour);
+            sHour = "0"+sHour;
+        }else{
+            sHour = std::to_string (hour);
+        }
+        
+        ///
+        
+        if(min<10){
+            sMin = std::to_string (min);
+            sMin = "0"+sMin;
+        }else{
+            sMin = std::to_string (min);
+        }
+        
+        /////
+        
+        if(sec<10){
+            sSec = std::to_string (sec);
+            sSec = "0"+sSec;
+        }else{
+            sSec = std::to_string (sec);
+        }
+        
+       tim = sHour +":"+sMin +":"+sSec;
+       std::cout<<tim<<std::endl;
+     
+    }
+    
+      Czas(int a, int b, int c){
+         
+        hour = a ;
+        min = b;
+        sec = c;
+    }
+    
+    void nextHour(){
+        hour = hour+1;
+        if(hour>23){
+            hour=0;
+        }
+    }
+    
+    void nextMin(){
+        min = min+1;
+        if(min>59){
+            min=0;
+        }
+    }
+    
+    void nextSec(){
+        sec = sec+1;
+        if(sec>59){
+            sec=0;
+        }
+    }
+    
+    
+};
+
+int main()
+{
+   Czas cz(24,59,4);
+   cz.godzina();
+   cz.nextHour();
+   cz.nextMin();
+   cz.nextSec();
+   cz.godzina();
+
+    return 0;
+}
+
