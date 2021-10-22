@@ -1,4 +1,3 @@
-
 #include <iostream>
 
 struct Czas{
@@ -76,18 +75,20 @@ struct Czas{
         }
     }
     
+    void dalej(){
+        nextHour();
+        nextMin();
+        nextSec();
+    }
     
 };
 
 int main()
 {
-   Czas cz(24,59,4);
+   Czas cz(23,59,4);
    cz.godzina();
-   cz.nextHour();
-   cz.nextMin();
-   cz.nextSec();
+   cz.dalej();
    cz.godzina();
 
     return 0;
 }
-
