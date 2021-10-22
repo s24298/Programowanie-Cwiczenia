@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+    auto askUser(std::string prompt)-> int
+    {
+        std::cout<< prompt << "int: ";
+        auto n = std::string{};
+        std::getline(std::cin,n);
+        return std::stoi(n);
+    }
+    
+
+    void odejmowanie(int a, int b){
+        int suma = 0;
+        suma = a - b;
+        cout<<suma;
+    }
+
+
+int main()
+{
+
+  int a = askUser("a=");
+  int b = askUser("B=");
+    odejmowanie(a,b);
+
+    return 0;
+}
