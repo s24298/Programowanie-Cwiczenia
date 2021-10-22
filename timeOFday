@@ -1,0 +1,125 @@
+
+#include <iostream>
+
+using namespace std;
+
+
+
+
+
+struct Czas{
+    
+    int hour;
+    int min;
+    int sec;
+
+
+ enum Time_of_Day:int{noc=24,poranek=6,poludnie=12,wieczor=18};
+    
+         Time_of_Day NOC = noc;
+        Time_of_Day PORANEK = poranek;
+        Time_of_Day POLUDNIE = poludnie;
+        Time_of_Day WIECZOR = wieczor;
+    
+    
+    void godzina(){
+        
+        std::string tim;
+        std::string sHour;
+        std::string sMin;
+        std::string sSec;
+        
+   
+        
+        
+       
+        if(hour<10){
+            sHour = std::to_string (hour);
+            sHour = "0"+sHour;
+        }else{
+            sHour = std::to_string (hour);
+        }
+        
+        ///
+        
+        if(min<10){
+            sMin = std::to_string (min);
+            sMin = "0"+sMin;
+        }else{
+            sMin = std::to_string (min);
+        }
+        
+        /////
+        
+        if(sec<10){
+            sSec = std::to_string (sec);
+            sSec = "0"+sSec;
+        }else{
+            sSec = std::to_string (sec);
+        }
+        
+       tim = sHour +":"+sMin +":"+sSec;
+       std::cout<<tim<<std::endl;
+     
+    }
+    
+      Czas(int a, int b, int c){
+         
+        hour = a ;
+        min = b;
+        sec = c;
+    }
+    
+    void nextHour(){
+        hour = hour+1;
+        if(hour>23){
+            hour=0;
+        }
+    }
+    
+    void nextMin(){
+        min = min+1;
+        if(min>59){
+            min=0;
+        }
+    }
+    
+    void nextSec(){
+        sec = sec+1;
+        if(sec>59){
+            sec=0;
+        }
+    }
+    
+    void dalej(){
+        nextHour();
+        nextMin();
+        nextSec();
+    }
+    
+    void timeOfDay(){
+        if(hour>POLUDNIE && hour<WIECZOR){
+            cout<<"Jest poludnie";
+        }else if(hour>WIECZOR && hour<NOC){
+            cout<<"Jest wieczor";
+        }else if(hour>NOC && hour<PORANEK){
+            cout<<"Jest noc";
+        }else if(hour>PORANEK && hour<POLUDNIE){
+            cout<<"Jest poranek";
+        }
+
+    }
+    
+    
+};
+
+int main()
+{
+   Czas cz(6,59,4);
+   cz.godzina();
+   cz.dalej();
+   cz.godzina();
+   cz.timeOfDay();
+
+    return 0;
+}
