@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <iostream>
+
+int main()
+{
+    std::string gwiazdka = "";
+    std::string sumaGwiazd = "";
+    
+    std::cout<<"y: "; //tak ma byc
+    int x ;
+    std::cin>>x;
+    
+    std::cout<<"x: "; //tak tez
+    int y ;
+    std::cin>>y;
+
+    for(int i = 0; i<y;i++){
+        gwiazdka = gwiazdka + "*";
+    }
+    
+    for(int i = 0;i<x;i++){
+        
+       // gwiazdka = "***";
+        sumaGwiazd +=gwiazdka + "\n";
+    }
+    
+    std::cout << sumaGwiazd << std::endl;
+    
+
+    return 0;
+}
