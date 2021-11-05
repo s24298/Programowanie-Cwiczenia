@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    int suma=1;
+    int x;
+    std::cout<<"Podaj liczbe: ";
+    std::cin >> x;
+    
+   std::string sup="";
+   for(int a = 1; a<=x;a++){
+       std::string zak= std::to_string(a);
+       suma = suma*a;
+       sup += zak + "*";
+       
+      
+       std::cout <<"Suma po " <<a<<" "<<"przejsciu: "<<suma<< std::endl;
+   }
+     sup.pop_back();
+     std::cout<<sup<<" = "<<suma<<std::endl;
+    return 0;
+}
+

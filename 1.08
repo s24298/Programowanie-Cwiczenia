@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <iostream>
+
+int main()
+{
+    int a,b,c;
+    
+    std::cout << "Podaj a" << std::endl;
+    std::cin>>a;
+    std::cout<<""<<std::endl;
+    
+    std::cout << "Podaj b" << std::endl;
+    std::cin>>b;
+    std::cout<<""<<std::endl;
+    
+    std::cout << "Podaj c" << std::endl;
+    std::cin>>c;
+    std::cout<<""<<std::endl;
+    
+    if(a>b && a>c){
+        std::cout<<"A"<<std::endl;
+    }else if(b>a && b>c){
+        std::cout<<"B"<<std::endl;
+    }else if(c>a && c>b){
+        std::cout<<"C"<<std::endl;
+    }else{
+        std::cout<<"Nie ma zwyciezcy";
+    }
+    
+
+    return 0;
+}
+

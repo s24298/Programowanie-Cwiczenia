@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <iostream>
+
+int main()
+{
+    int a,b;
+    
+    std::cout << "Podaj a" << std::endl;
+    std::cin>>a;
+    std::cout<<""<<std::endl;
+    
+    std::cout << "Podaj b" << std::endl;
+    std::cin>>b;
+    std::cout<<""<<std::endl;
+    
+    
+    if(a>b){
+        b=a;
+        a=b;
+
+    std::cout<<"Tak sie nie da :(";
+    return 0;        
+    }
+    
+    for(a;a<=b;a++){
+        std::cout<<a<<std::endl;
+    }
+
+    return 0;
+}
+

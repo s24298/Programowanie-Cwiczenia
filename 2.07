@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <iostream>
+
+int main()
+{
+    int limit,dzielnik;
+    int suma =0;
+    std::cout<<"Podaj limit"<<std::endl;
+    std::cin >> limit;
+    
+    std::cout<<"Podaj dzilnik"<<std::endl;
+    std::cin >> dzielnik;
+    
+    for(int a = 0; a<limit;a++){
+        if(a%dzielnik==0){
+            
+            //std::cout<<"Liczba A: "<<a<<std::endl;
+            //std::cout<<"Przed suma:"<<suma<<std::endl;
+            suma +=a;
+            //std::cout<<"Po suma:"<<suma<<std::endl;
+        }
+    }
+    std::cout << "Suma: ";
+    std::cout << suma << std::endl;
+    
+    return 0;
+}
