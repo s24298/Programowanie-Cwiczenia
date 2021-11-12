@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+ void init(int n){
+     int tab[n];
+     
+     for(int i=0;i!=(n);i++){
+         tab[i]=0;
+     }
+     
+    for(int i=0;i!=(n);i++){
+         std::cout<<i<<" : "<<tab[i]<<std::endl;
+     }
+ }
+ 
+
+  
+
+int main()
+{
+    init(235);
+
+    return 0;
+}

@@ -1,0 +1,43 @@
+
+#include <iostream>
+
+using namespace std;
+
+ void init(int n){
+     int tab[n];
+    
+     
+     for(int i=0;i!=(n-1);i++){
+         tab[i]=0;
+     }
+     
+    for(int i=0;i!=(n-1);i++){
+         std::cout<<i<<" : "<<tab[i]<<std::endl;
+     }
+ }
+ 
+ void init(int n,int x){
+     int tab[n];
+      int suma = 0;
+      
+     for(int i=0;i!=(n);i++){
+         tab[i]=i+x;
+         suma = suma + tab[i];
+     }
+     
+    for(int i=0;i!=(n);i++){
+         std::cout<<i<<" : "<<tab[i]<<std::endl;
+     }
+     
+     std::cout<<"Suma:"<<suma;
+ }
+    
+
+
+int main()
+{
+    init(4,5);
+   
+
+    return 0;
+}
