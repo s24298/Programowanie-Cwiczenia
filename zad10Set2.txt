@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+void a(char a, char b){
+    
+    if(a>b){
+        for(int i =b;i<=a;i++){
+            std::cout << (char) i << std::endl;
+        }
+    }
+    
+    if(b>a){
+        
+        for(int i =a;i<=b;i++){
+            std::cout << (char) i << std::endl;
+        }
+        
+    }
+    
+    
+}
+
+
+
+int main()
+{
+     a('v','a');
+
+    return 0;
+}
